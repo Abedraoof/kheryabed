@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abed & Khery | Diesel From Plastic</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif}
+  body{line-height:1.6;background:#0f172a;color:#e5e7eb;scroll-behavior:smooth}
+
+  header{background:linear-gradient(120deg,#0ea5e9,#22c55e);padding:80px 20px;text-align:center}
+  header h1{font-size:50px;margin-bottom:10px;animation:fadeDown 1s ease}
+  header p{font-size:22px;opacity:.95;animation:fadeUp 1.4s ease}
+
+  .btn{display:inline-block;margin-top:25px;padding:14px 30px;background:#111827;color:#fff;border-radius:30px;text-decoration:none;font-weight:bold;transition:.3s}
+  .btn:hover{transform:scale(1.1);background:#020617}
+
+  section{padding:70px 10%;}
+  h2{margin-bottom:40px;text-align:center;font-size:34px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+  .card{background:#1f2937;padding:25px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.3);transition:.4s}
+  .card:hover{transform:translateY(-10px)}
+  .card h3{margin-bottom:10px;color:#22c55e}
+
+  .about{background:#111827;text-align:center}
+  .gallery img{width:100%;border-radius:16px;transition:.4s}
+  .gallery img:hover{transform:scale(1.05)}
+
+  .qr{text-align:center;background:#020617}
+  .qr img{width:200px;margin-top:20px}
+
+  .cta{background:linear-gradient(120deg,#22c55e,#0ea5e9);text-align:center}
+  footer{text-align:center;padding:20px;background:#020617;font-size:14px}
+
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-40px)}to{opacity:1}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Abed & Khairi Energy</h1>
+  <p>Turning Plastic Waste Into Clean Diesel Fuel</p>
+  <a href="#contact" class="btn">Get In Touch</a>
+</header>
+
+<section>
+  <h2>Why Choose Us</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Eco Friendly</h3>
+      <p>We convert plastic waste into usable diesel, reducing landfill pollution and protecting the planet.</p>
+    </div>
+    <div class="card">
+      <h3>Advanced Technology</h3>
+      <p>Our modern pyrolysis process ensures high efficiency and minimal emissions.</p>
+    </div>
+    <div class="card">
+      <h3>Cost Efficient</h3>
+      <p>Our fuel production lowers costs while delivering reliable high-quality diesel.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <h2>About Our Company</h2>
+  <p style="max-width:800px;margin:auto">
+    Abed & Khairi is a forward-thinking energy company focused on sustainable fuel production.
+    By transforming plastic waste into diesel fuel, we help industries reduce environmental impact
+    while meeting energy demands.
+  </p>
+</section>
+
+<section>
+  <h2>Our Diesel Production Machines</h2>
+  <div class="grid gallery">
+    <img src="https://images.unsplash.com/photo-1581093458791-9d42a1f2c0e4" alt="Diesel Machine">
+    <img src="https://images.unsplash.com/photo-1581092334394-8a64c3b4d2c6" alt="Factory Machine">
+    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="Industrial Equipment">
+  </div>
+</section>
+
+<section class="qr">
+  <h2>Scan Our Website</h2>
+  <p>Scan the QR code to visit our website instantly.</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://abedkhairi.com" alt="QR Code">
+</section>
+
+<section class="cta" id="contact">
+  <h2>Partner With Us Today</h2>
+  <p>Interested in sustainable fuel solutions? Contact us now.</p>
+  <a href="mailto:info@abedkhairi.com" class="btn">Contact Us</a>
+</section>
+
+<footer>
+  © 2026 Abed & Khairi Energy — All Rights Reserved
+</footer>
+
+</body>
+</html>
