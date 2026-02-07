@@ -6,56 +6,84 @@
 <title>Abed & Khairi | Production</title>
 
 <style>
-  *{box-sizing:border-box;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif}
-  body{line-height:1.6;color:#fff;scroll-behavior:smooth}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-  /* ********************** خلفية الصفحة ********************** */
-  body{
-    background: url('background.jpg') no-repeat center center/cover;
+  body {
+    line-height: 1.6;
+    color: #fff;
+    scroll-behavior: smooth;
+
+    /* ********************** الخلفية من الصورة الجديدة ********************** */
+    background: url('background.png') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed; /* يجعل الصورة ثابتة عند التمرير */
+    min-height: 100vh; /* يغطي كل ارتفاع الشاشة */
   }
 
-  header{
-    padding:50px 20px;
-    text-align:center;
-    background: rgba(0,0,0,0.5);
-  }
-  header h1{font-size:50px;margin-bottom:10px;}
-  header p{font-size:22px;opacity:.9;}
-
-  section{
-    padding:70px 10%;
-    text-align:center;
-    background: rgba(0,0,0,0.5);
-    margin:20px auto;
-    border-radius:15px;
-    max-width:1000px;
+  header {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.5); /* خلفية شفافة للنص */
   }
 
-  h2{margin-bottom:20px;font-size:40px;text-shadow:2px 2px 5px rgba(0,0,0,0.7);}
-  p{font-size:20px;line-height:1.8;text-shadow:1px 1px 3px rgba(0,0,0,0.5);}
-
-  .btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 30px;
-    background:#111827;
-    color:#fff;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-  }
-  .btn:hover{
-    transform:scale(1.1);
-    background:#020617;
+  header h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
   }
 
-  footer{
-    text-align:center;
-    padding:20px;
+  header p {
+    font-size: 22px;
+    opacity: .9;
+  }
+
+  section {
+    padding: 70px 10%;
+    text-align: center;
+    background: rgba(0,0,0,0.5); /* خلفية شفافة للنص */
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 1000px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #111827;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+    background: #020617;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
     background: rgba(0,0,0,0.7);
-    font-size:14px;
+    font-size: 14px;
   }
 </style>
 </head>
