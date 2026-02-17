@@ -121,17 +121,15 @@
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Abed & Khairi Energy</h1>
+  <h1>Abed & Khiri Energy</h1>
   <p>Turning Plastic Waste Into Clean Diesel Fuel</p>
   <div class="header-buttons">
-    <a href="proposal.pdf" target="_blank" class="btn btn-pdf">📄 Download Business Plan (PDF)</a>
+<!--    <a href="proposal.pdf" target="_blank" class="btn btn-pdf">📄 Download Business Plan (PDF)</a>-->
     <a href="#b2b" class="btn">B2B Green Club</a>
     <a href="production.html" class="btn">Go To Production Page</a>
   </div>
 </header>
-
 <section>
   <h2>Live Production Status</h2>
   <div class="live-tracker">
@@ -161,15 +159,60 @@
         <h3>Join the Club</h3>
         <p style="color: #94a3b8; margin-bottom: 15px;">Sell your plastic waste to us at competitive prices. We handle the logistics.</p>
 
-        <form action="https://formspree.io/f/abedkhiri927@gmail.com" method="POST">
+ <section id="b2b">
+  <h2 id="b2b">B2B Green Alliance</h2>
+  <div class="b2b-container">
+    <div class="b2b-form">
+        <h3>Join the Club</h3>
+        <p style="color: #94a3b8; margin-bottom: 15px;">Sell your plastic waste to us at competitive prices. We handle the logistics.</p>
+
+        <form id="ajax-form" action="https://formspree.io/f/xjgerpoz" method="POST">
             <input type="text" name="company_name" class="form-input" placeholder="Company Name" required>
             <input type="tel" name="phone_number" class="form-input" placeholder="Phone Number" required>
             <input type="number" name="weight_tons" class="form-input" placeholder="Weight (Tons)" required>
             <input type="email" name="email" class="form-input" placeholder="Corporate Email" required>
-
-            <input type="hidden" name="_subject" value="New B2B Plastic Seller Offer!">
-            <button type="submit" class="btn-submit">Subscribe & Sell Now</button>
+            <button type="submit" class="btn-submit" id="submit-btn">Subscribe & Sell Now</button>
+            <div id="status-msg"></div>
         </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  var form = document.getElementById("ajax-form");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("status-msg");
+    var btn = document.getElementById("submit-btn");
+    var data = new FormData(event.target);
+
+    btn.innerText = "Sending...";
+    btn.disabled = true;
+
+    fetch(event.target.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        status.style.color = "#22c55e";
+        status.innerHTML = "✅ Thanks! Your offer has been sent successfully.";
+        form.reset();
+      } else {
+        status.style.color = "#ef4444";
+        status.innerHTML = "❌ Oops! There was a problem submitting your form.";
+      }
+    }).catch(error => {
+      status.style.color = "#ef4444";
+      status.innerHTML = "❌ Connection error. Please try again.";
+    }).finally(() => {
+        btn.innerText = "Subscribe & Sell Now";
+        btn.disabled = false;
+    });
+  }
+  form.addEventListener("submit", handleSubmit);
+</script>
     </div>
   </div>
 
